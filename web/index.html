@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TLW Season Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app" class="hidden">
+        <div class="dashboard">
+            <!-- Header -->
+            <div class="header">
+                <div class="logo">
+                    <h1>The Land of Wolves</h1>
+                    <span class="subtitle">Season Manager</span>
+                </div>
+                <button class="close-btn" onclick="closeUI()">✕</button>
+            </div>
+
+            <!-- Main Content -->
+            <div class="content">
+                <!-- Left Panel - Current Season -->
+                <div class="panel">
+                    <h2>Current Season</h2>
+                    <div class="season-info">
+                        <div class="stage-number" id="stageNumber">1</div>
+                        <div class="stage-details">
+                            <h3 id="stageName">Early Spring</h3>
+                            <p id="stageDescription">Warming temperatures, frequent rain</p>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Stage Progress</span>
+                            <span id="progressPercent">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Day</span>
+                            <span class="info-value" id="currentDay">1</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Weather</span>
+                            <span class="info-value" id="currentWeather">Clear</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Next Stage</span>
+                            <span class="info-value" id="nextStage">--</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Stability</span>
+                            <span class="info-value" id="stabilityFactor">1.0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center Panel - Temperature & Region -->
+                <div class="panel">
+                    <h2>Climate Data</h2>
+                    <div class="temperature-display">
+                        <div class="temp-value" id="currentTemp">15°C</div>
+                        <div class="temp-label">Current Temperature</div>
+                        <div class="region-info">
+                            <span id="regionName">Heartlands</span>
+                            <span class="region-zone" id="regionZone">Central Plains</span>
+                        </div>
+                    </div>
+                    
+                    <div class="thermodynamics">
+                        <h3>Thermodynamic Factors</h3>
+                        <div class="factor-list" id="factorList">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Panel - Season Cycle -->
+                <div class="panel">
+                    <h2>12-Stage Cycle</h2>
+                    <div class="season-wheel">
+                        <div class="season-stages" id="seasonStages">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="legend">
+                        <div class="legend-item"><span class="color-spring"></span> Spring</div>
+                        <div class="legend-item"><span class="color-summer"></span> Summer</div>
+                        <div class="legend-item"><span class="color-autumn"></span> Autumn</div>
+                        <div class="legend-item"><span class="color-winter"></span> Winter</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Panel - Region Temperatures -->
+            <div class="bottom-panel">
+                <h2>Regional Temperatures</h2>
+                <div class="temp-grid" id="tempGrid">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <span>The Land of Wolves • www.wolves.land • Developer: iBoss</span>
+                <span id="lastUpdate">Last Update: --</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

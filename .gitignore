@@ -1,0 +1,45 @@
+# Git ignore file for Season Manager
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# Log files
+*.log
+debug.txt
+error.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Build artifacts (if any)
+build/
+dist/
+*.zip
+*.rar
+*.7z
+
+# User-specific config backups
+config.json.bak
+config.json.old
+
+# Development and testing
+test/
+tests/
+.test/
+*.test.lua

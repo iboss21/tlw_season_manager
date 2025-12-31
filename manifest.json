@@ -1,0 +1,148 @@
+{
+  "name": "Season Manager - 12 Stage Dynamic Weather and Climate Overhaul",
+  "version": "1.0.0",
+  "author": "iboss21",
+  "description": "A comprehensive immersion script that forces the world to follow a realistic 12-stage seasonal cycle with dynamic weather adjustments, temperature changes, and complete climate overhaul for Red Dead Redemption 2.",
+  "game": "Red Dead Redemption 2",
+  "platform": "PC",
+  "type": "script",
+  "category": "weather",
+  "tags": [
+    "weather",
+    "season",
+    "immersion",
+    "climate",
+    "temperature",
+    "environment",
+    "realistic",
+    "dynamic"
+  ],
+  "requirements": {
+    "scripthook": "Script Hook RDR2",
+    "game_version": "1.0+",
+    "framework": "Script Hook RDR2 or RedM"
+  },
+  "files": {
+    "main": "main.lua",
+    "config": "config.json",
+    "version": "version.txt",
+    "documentation": "DOCUMENTATION.md",
+    "install_guide": "INSTALL.md",
+    "license": "LICENSE"
+  },
+  "features": [
+    "12-stage seasonal cycle with unique characteristics",
+    "Dynamic weather system with 10+ weather types",
+    "Realistic temperature calculations",
+    "5 distinct climate zones",
+    "Fully configurable settings",
+    "Minimal performance impact",
+    "API for mod integration"
+  ],
+  "seasons": [
+    {
+      "stage": 1,
+      "name": "Deep Winter",
+      "month": 12,
+      "temperature": -10
+    },
+    {
+      "stage": 2,
+      "name": "Late Winter",
+      "month": 1,
+      "temperature": -5
+    },
+    {
+      "stage": 3,
+      "name": "Winter's End",
+      "month": 2,
+      "temperature": 0
+    },
+    {
+      "stage": 4,
+      "name": "Early Spring",
+      "month": 3,
+      "temperature": 8
+    },
+    {
+      "stage": 5,
+      "name": "Mid Spring",
+      "month": 4,
+      "temperature": 15
+    },
+    {
+      "stage": 6,
+      "name": "Late Spring",
+      "month": 5,
+      "temperature": 20
+    },
+    {
+      "stage": 7,
+      "name": "Early Summer",
+      "month": 6,
+      "temperature": 28
+    },
+    {
+      "stage": 8,
+      "name": "Peak Summer",
+      "month": 7,
+      "temperature": 32
+    },
+    {
+      "stage": 9,
+      "name": "Late Summer",
+      "month": 8,
+      "temperature": 28
+    },
+    {
+      "stage": 10,
+      "name": "Early Autumn",
+      "month": 9,
+      "temperature": 20
+    },
+    {
+      "stage": 11,
+      "name": "Mid Autumn",
+      "month": 10,
+      "temperature": 12
+    },
+    {
+      "stage": 12,
+      "name": "Late Autumn",
+      "month": 11,
+      "temperature": 3
+    }
+  ],
+  "climate_zones": [
+    {
+      "name": "Northern Mountain",
+      "regions": ["Grizzlies West", "Grizzlies East", "Cumberland Forest"],
+      "temperature_modifier": -8
+    },
+    {
+      "name": "Central Plains",
+      "regions": ["Heartlands", "Roanoke Ridge", "New Hanover"],
+      "temperature_modifier": 0
+    },
+    {
+      "name": "Southern Humid",
+      "regions": ["Lemoyne", "Bayou Nwa", "Bluewater Marsh"],
+      "temperature_modifier": 5
+    },
+    {
+      "name": "Desert Arid",
+      "regions": ["New Austin", "Rio Bravo", "Gaptooth Ridge"],
+      "temperature_modifier": 10
+    },
+    {
+      "name": "Coastal Moderate",
+      "regions": ["West Elizabeth Coast", "Flat Iron Lake"],
+      "temperature_modifier": 2
+    }
+  ],
+  "links": {
+    "nexus_mods": "https://www.nexusmods.com/reddeadredemption2/mods/7521",
+    "github": "https://github.com/iboss21/tlw_season_manager",
+    "issues": "https://github.com/iboss21/tlw_season_manager/issues"
+  }
+}

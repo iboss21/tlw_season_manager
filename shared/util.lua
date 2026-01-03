@@ -103,9 +103,22 @@ end
 
 -- Time utilities
 function Util.GetGameTime()
-    local hour = GetClockHours()
-    local minute = GetClockMinutes()
-    local second = GetClockSeconds()
+    local hour, minute, second
+    
+    -- Check if running on server or client
+    if IsDuplicityVersion() then
+        -- Server side: use real-world time
+        local date = os.date("*t")
+        hour = date.hour
+        minute = date.min
+        second = date.sec
+    else
+        -- Client side: use game clock
+        hour = GetClockHours()
+        minute = GetClockMinutes()
+        second = GetClockSeconds()
+    end
+    
     return {
         hour = hour,
         minute = minute,

@@ -102,10 +102,27 @@ function Util.GetDistance2D(coord1, coord2)
 end
 
 -- Time utilities
+-- Get time information based on execution context
+-- Server: Returns real-world time using os.date()
+-- Client: Returns in-game time using GetClockHours/Minutes/Seconds natives
+-- This dual behavior is necessary because clock natives are client-only
 function Util.GetGameTime()
-    local hour = GetClockHours()
-    local minute = GetClockMinutes()
-    local second = GetClockSeconds()
+    local hour, minute, second
+    
+    -- Check if running on server or client
+    if IsDuplicityVersion() then
+        -- Server side: use real-world time
+        local date = os.date("*t")
+        hour = date.hour
+        minute = date.min
+        second = date.sec
+    else
+        -- Client side: use game clock
+        hour = GetClockHours()
+        minute = GetClockMinutes()
+        second = GetClockSeconds()
+    end
+    
     return {
         hour = hour,
         minute = minute,
